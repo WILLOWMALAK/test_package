@@ -18,7 +18,8 @@ classifiers = ['Intended Audience :: Science/Research',
 dependencies = ['numpy',
                 'networkx'
 ]
-dynamic = ["version"]
+
+version = "0.0.1"
 
 [tool.setuptools.dynamic]
 version = {attr = "test-package-fMRI-dMRI.__version__"}
