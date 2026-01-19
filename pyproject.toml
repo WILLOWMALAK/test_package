@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools","wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "test-package-fMRI-dMRI"
+authors = [
+    {name = "Sam Williams", email = "s.willowmalak@gmail.com"},
+]
+readme="README.md"
+description = "Implementation of joint dMRI and fMRI metrics"
+keywords = ["tractography", "multi-fixel"]
+license = "GPL-3.0-only"
+classifiers = ['Intended Audience :: Science/Research',
+                'Natural Language :: English',
+                'Programming Language :: Python',
+]
+dependencies = ['numpy',
+                'networkx'
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "test-package-fMRI-dMRI.__version__"}
+
+[project.optional-dependencies]
+viz = ["pyvista"]
+
+[project.urls]
+"GitHub" = "https://github.com/WILLOWMALAK/test_package.git"
+"Documentation" = "https://unravel.readthedocs.io/en/latest/"
+
+[tool.setuptools.packages.find]
+where = ["src"] 
